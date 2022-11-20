@@ -1,4 +1,5 @@
-const db = 'https://my-json-server.typicode.com/sekler09/json-server/'
+//const db = 'https://my-json-server.typicode.com/sekler09/json-server/'
+const db = 'http://localhost:3001/'
 
 export default async function fetchData(url, params = {}, options = {}) {
   const searchParams = new URLSearchParams(params).toString()
