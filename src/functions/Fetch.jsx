@@ -1,4 +1,4 @@
-const db = 'http://localhost:5000/'
+const db = 'https://my-json-server.typicode.com/sekler09/json-server/'
 
 
 export default async function fetchData(url, params = {}, options = {}){
