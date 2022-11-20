@@ -29,9 +29,13 @@ export default function Note() {
     // eslint-disable-next-line no-restricted-globals
     const conf = confirm('Are u sure?')
     if (conf) {
-      fetchData(`notes/${noteId}`, {userId : user.id}, {
-        method: 'DELETE',
-      })
+      fetchData(
+        `notes/${noteId}`,
+        {userId: user.id},
+        {
+          method: 'DELETE',
+        }
+      )
       navigate('/notes')
     }
   }

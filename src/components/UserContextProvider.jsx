@@ -7,7 +7,7 @@ import React, {
 } from 'react'
 
 const UserContext = createContext({
-  setUser: () => {}
+  setUser: () => {},
 })
 
 export const useUserContext = () => {
@@ -16,7 +16,7 @@ export const useUserContext = () => {
 export default function UserContextProvider({children}) {
   const [user, setUser] = useState(() => {
     try {
-      return  JSON.parse(localStorage.getItem('user'))
+      return JSON.parse(localStorage.getItem('user'))
     } catch (error) {
       return {}
     }

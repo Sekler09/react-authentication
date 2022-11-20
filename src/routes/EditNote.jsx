@@ -51,19 +51,23 @@ export default function EditNote() {
         title,
         body: text,
       }
-      fetchData(`notes/${noteId}`, {userId:user.id}, {
-        method: 'PATCH',
-        body: JSON.stringify(editedNote),
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      })
+      fetchData(
+        `notes/${noteId}`,
+        {userId: user.id},
+        {
+          method: 'PATCH',
+          body: JSON.stringify(editedNote),
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        }
+      )
         .then(() => navigate(`/notes`))
         .catch(() => console.log('bad luck'))
     } else {
       setIsSubmited(false)
     }
-  }, [errors, isSubmited, navigate,noteId, text, title, user])
+  }, [errors, isSubmited, navigate, noteId, text, title, user])
 
   return (
     <div>

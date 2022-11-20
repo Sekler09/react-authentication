@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import {Link, useLoaderData, useNavigate} from 'react-router-dom'
-import { useUserContext } from '../components/UserContextProvider'
+import {useUserContext} from '../components/UserContextProvider'
 import fetchData from '../functions/Fetch'
 
 export const loader = async () => {
@@ -40,13 +40,17 @@ export default function Register() {
         password: formValues.password,
         createdAt: new Date().toISOString(),
       }
-      fetchData('users',{}, {
-        method: 'POST',
-        body: JSON.stringify(user),
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      })
+      fetchData(
+        'users',
+        {},
+        {
+          method: 'POST',
+          body: JSON.stringify(user),
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        }
+      )
         .then(() => navigate('/login'))
         .catch(() => console.log('bad luck'))
     } else {
@@ -98,52 +102,52 @@ export default function Register() {
   }
 
   return (
-    <div className="bg-sky-400 w-screen h-screen flex flex-col justify-center py-20">
-      <form className="form">
-        <h1 className="text-3xl font-bold text-center mb-3">Sign Up</h1>
-        <div className="flex flex-col gap-5">
-          <div className="flex flex-col">
-            <label className="label" htmlFor="email">
+    <div className='bg-sky-400 w-screen h-screen flex flex-col justify-center py-20'>
+      <form className='form'>
+        <h1 className='text-3xl font-bold text-center mb-3'>Sign Up</h1>
+        <div className='flex flex-col gap-5'>
+          <div className='flex flex-col'>
+            <label className='label' htmlFor='email'>
               Email
             </label>
             <input
-              placeholder="Email"
-              id="email"
-              className="input"
+              placeholder='Email'
+              id='email'
+              className='input'
               onChange={handleChange}
             />
           </div>
-          <p className="invalid">{formErrors.email}</p>
-          <div className="flex flex-col">
-            <label className="label" htmlFor="password">
+          <p className='invalid'>{formErrors.email}</p>
+          <div className='flex flex-col'>
+            <label className='label' htmlFor='password'>
               Password
             </label>
             <input
-              type="password"
-              placeholder="Password"
-              id="password"
-              className="input"
+              type='password'
+              placeholder='Password'
+              id='password'
+              className='input'
               onChange={handleChange}
             />
           </div>
-          <p className="invalid">{formErrors.password}</p>
-          <div className="flex flex-col">
-            <label className="label" htmlFor="passwordRep">
+          <p className='invalid'>{formErrors.password}</p>
+          <div className='flex flex-col'>
+            <label className='label' htmlFor='passwordRep'>
               Repeat password
             </label>
             <input
-              type="password"
-              placeholder="Repeat password"
-              id="passwordRep"
-              className="input"
+              type='password'
+              placeholder='Repeat password'
+              id='passwordRep'
+              className='input'
               onChange={handleChange}
             />
           </div>
-          <p className="invalid">{formErrors.passwordRep}</p>
-          <button className="btn" onClick={handleSubmit}>
+          <p className='invalid'>{formErrors.passwordRep}</p>
+          <button className='btn' onClick={handleSubmit}>
             Sign Up
           </button>
-          <Link to="/login" className="self-end text-blue-400 hover:underline">
+          <Link to='/login' className='self-end text-blue-400 hover:underline'>
             Back to login
           </Link>
         </div>

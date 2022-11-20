@@ -25,7 +25,7 @@ const router = createHashRouter([
     children: [
       {
         index: true,
-        element : <NotFound/>
+        element: <NotFound />,
       },
       {
         path: '/notes',
@@ -52,7 +52,7 @@ const router = createHashRouter([
       },
       {
         path: '*',
-        element: <NotFound/>,
+        element: <NotFound />,
       },
     ],
   },
