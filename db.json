@@ -1,0 +1,52 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "user1@gmail.com",
+      "password": "1234",
+      "createdAt": "2022-11-17T21:38:23.203Z"
+    },
+    {
+      "id": 2,
+      "email": "user2@gmail.com",
+      "password": "1234",
+      "createdAt": "2022-11-19T14:47:22.124Z"
+    },
+    {
+      "id": 3,
+      "email": "artem@gmail.com",
+      "password": "2349",
+      "createdAt": "2022-11-19T23:43:04.191Z"
+    }
+  ],
+  "notes": [
+    {
+      "id": 1,
+      "title": "abcd",
+      "userId": 2,
+      "body": "Clean house!",
+      "createdAt": "2022-11-19T14:47:54.464Z"
+    },
+    {
+      "id": 2,
+      "title": "Note2",
+      "userId": 2,
+      "body": "Neda do smth",
+      "createdAt": "2022-11-19T20:52:05.681Z"
+    },
+    {
+      "id": 3,
+      "title": "2125",
+      "userId": 1,
+      "body": "1",
+      "createdAt": "2022-11-19T23:23:26.459Z"
+    },
+    {
+      "id": 4,
+      "title": "Artem!",
+      "userId": 3,
+      "body": "Privet!",
+      "createdAt": "2022-11-19T23:44:20.936Z"
+    }
+  ]
+}

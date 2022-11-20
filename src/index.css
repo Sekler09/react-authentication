@@ -1,3 +1,28 @@
+@tailwind base;
+@tailwind components;
+
+.input {
+  @apply shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-normal focus:outline-none;
+}
+
+.label{
+  @apply text-gray-700 text-sm font-bold mb-2;
+}
+
+.invalid{
+  @apply text-red-600;
+}
+
+.btn{
+  @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none self-center;
+}
+
+.form{
+  @apply w-80 bg-white p-10 rounded-xl shadow-md self-center sm:w-2/5 lg:w-2/6
+}
+
+@tailwind utilities;
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,6 +30,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(56 189 248);
 }
 
 code {
